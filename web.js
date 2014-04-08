@@ -15,12 +15,11 @@ app.configure(function () {
 
 
 //define API
-app.get('/', function(req, res) {
-  res.send('<h1>Famous Bird by Thomas Watson</h1><h2><a href="//demo.famo.us/flappy-bird">Visit demo.famo.us/flappy-bird</a> to play</h2>');
-});
-
 app.get("/scores", scores.getTopScores);
 app.post("/scores", scores.postScore);
+
+//serve static files if a route is not defined
+app.use('/', express.static(__dirname + '/game'));
 
 
 var port = Number(process.env.PORT || 5000);
