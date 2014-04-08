@@ -10,7 +10,7 @@ exports.getTopScores = function(req, res) {
 		
 		var scores = highScoresCollection
 			.find()
-			.sort({score:1})
+			.sort({score:-1})
 			.limit(30)
 			.toArray(function(err, items){
 				console.log(items);
