@@ -4,7 +4,6 @@ var mongoUri = "mongodb://admin:0okm9ijN@ds030607.mongolab.com:30607/flappybird"
 
 
 exports.getTopScores = function(req, res) {
-
 	//return the top 30 scores for now
 	mongo.Db.connect(mongoUri, function (err, db) {
 	 	var highScoresCollection = db.collection('highScores');
@@ -21,7 +20,7 @@ exports.getTopScores = function(req, res) {
 };//end method
 
 exports.postScore = function(req, res){
-	console.log(req.body);
+	//console.log(req.body);
 	var data = JSON.parse(req.body["data"]);
 	mongo.Db.connect(mongoUri, function (err, db) {
 
