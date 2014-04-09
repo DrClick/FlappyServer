@@ -88,7 +88,7 @@ define(function(require, exports, module) {
     });
 
     //show the loading screen and start loading
-    Timer.setTimeout({
+    Timer.setTimeout(function(){
         AssetLoader.getAssets(requiredAssets, function(){
             loading.hide();
             _loadGame.call(this);
