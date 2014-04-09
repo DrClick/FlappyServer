@@ -19,6 +19,7 @@ app.get("/scores", scores.getTopScores);
 app.post("/scores", scores.postScore);
 
 //serve static files if a route is not defined
+app.use(express.static(path.join(__dirname, 'public/game/content'), { maxAge: 31557600000 }));
 app.use('/', express.static(__dirname + '/game'));
 
 

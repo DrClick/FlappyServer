@@ -68,6 +68,7 @@ define(function(require, exports, module) {
     var requiredAssets = [
         "content/font/04B_19__.TTF",
         "content/font/terminal.woff",
+        "content/images/background.png",
         "content/images/birdie_1.png",
         "content/images/birdie_2.png",
         "content/images/birdie_3.png",
