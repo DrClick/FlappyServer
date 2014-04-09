@@ -93,7 +93,7 @@ define(function(require, exports, module) {
             loading.hide();
             _loadGame.call(this);
         }.bind(this)); 
-    }, 100);
+    }.bind(this), 100);
     
 
 
