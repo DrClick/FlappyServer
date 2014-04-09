@@ -28,7 +28,7 @@ define(function(require, exports, module){
 				return new Promise(function(resolve, reject) {
 		    		var image = new Image();
 					image.src = asset;
-					resolve();
+					image.onload = resolve;
 		  		});
 			}
 
