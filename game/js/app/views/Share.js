@@ -72,7 +72,6 @@ define(function(require, exports, module) {
         var likeUrl = "https://graph.facebook.com/me/og.likes";
         FBFunctions.FB().api(likeUrl,'post',{game: "demo.famou.us/famous-bird"});
 
-      
         //share score
         var shareUrl = 'https://graph.facebook.com/USERID/scores?score=USER_SCORE&access_token=ACCESS_TOKEN'
                 .replace("USERID", scoreData.uid)
@@ -80,9 +79,11 @@ define(function(require, exports, module) {
                 .replace("ACCESS_TOKEN", scoreData.token);
 
         console.log(shareUrl);
+
     	FBFunctions.FB().api(
            shareUrl,
-           'post',{},
+           'post',
+            {},
             function(response) {
                 alert("Hey " + scoreData.name + " thanks for sharing!");
             }
